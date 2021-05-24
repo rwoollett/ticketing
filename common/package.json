@@ -1,0 +1,33 @@
+{
+  "name": "@rwtix/common",
+  "version": "1.0.17",
+  "description": "rwtix common",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "rimraf build",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "rw <rodney.woollett@gmail.com> (rwoollett.github.io)",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "typescript": "^4.2.2"
+  },
+  "dependencies": {
+    "@types/cookie-session": "^2.0.42",
+    "@types/express": "^4.17.11",
+    "@types/jsonwebtoken": "^8.5.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "node-nats-streaming": "^0.3.2"
+  }
+}
